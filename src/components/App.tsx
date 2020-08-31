@@ -1,10 +1,10 @@
-import React from "react";
-import { Counter } from "./Counter";
-import { Hello } from "./Hello";
+import React, { ReactElement } from 'react';
+import { Counter } from './Counter';
+import { Hello } from './Hello';
 
-export const App = () => (
-    <>
-        <Hello name={"react-webpa2ck-typescript-babel"} />
-        <Counter />
-    </>
+export const App = (): ReactElement => (
+  <>
+    <Hello name="react-webpa2ck-typescript-babel" />
+    <Counter />
+  </>
 );

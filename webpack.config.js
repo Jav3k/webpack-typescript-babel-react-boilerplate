@@ -1,6 +1,7 @@
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 const APP_PATH = path.resolve(__dirname, 'src');
 const MODE = process.env.NODE_ENV === 'development' ? 'development' : 'production';
@@ -18,7 +19,7 @@ config = {
   devServer: {
     host: 'localhost',
     port: 8080,
-    progress: true,
+    progress: false,
     open: true,
     // hot: true
   },
@@ -36,6 +37,7 @@ config = {
   },
 
   plugins: [
+    new TsconfigPathsPlugin(),
     new HtmlWebpackPlugin({ inject: true, template: path.join(APP_PATH, 'index.html') }),
     new ForkTsCheckerWebpackPlugin(),
   ]

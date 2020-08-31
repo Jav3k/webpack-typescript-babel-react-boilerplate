@@ -1,0 +1,142 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "./"
+  },
+  "extends": [
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint",
+    "prettier/react"
+  ],
+  "plugins": [
+    "import",
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "ignorePatterns": [
+    "*.json",
+    "*.html",
+    "webpack*",
+    "node_modules",
+    "dist",
+    "built"
+  ],
+  "rules": {
+    // "max-len": ["error", { "code": 100 }],
+    "quotes": [
+      "error",
+      "single",
+      { "avoidEscape": true }
+    ],
+    "padding-line-between-statements": [
+      "off",
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "return"
+      },
+      {
+        "blankLine": "any",
+        "prev": "*",
+        "next": "if"
+      }
+    ],
+    "arrow-parens": ["error", "always"],
+    "dot-notation": [
+      "error",
+      {
+        "allowPattern": "^[a-z]+(_[a-z]+)+$"
+      }
+    ],
+    // "no-underscore-dangle": "off",
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "camelcase": [
+      "error",
+      {
+        "ignoreDestructuring": true
+      }
+    ],
+    // REACT
+    "react/jsx-indent": [
+      "error",
+      2
+    ],
+    "react/jsx-indent-props": [
+      "error",
+      2
+    ],
+    "react/destructuring-assignment": "error",
+    "react/jsx-max-props-per-line": [
+      1,
+      {
+        "maximum": 1,
+        "when": "multiline"
+      }
+    ],
+    "react/jsx-wrap-multilines": [
+      "error",
+      {
+        "arrow": true,
+        "return": true,
+        "declaration": true
+      }
+    ],
+    // "react/jsx-filename-extension": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    // Import
+    "import/prefer-default-export": "off",
+    // "import/extensions": [
+    //   "error",
+    //   {
+    //     "js": "never",
+    //     "mjs": "never",
+    //     "jsx": "never",
+    //     "ts": "never",
+    //     "tsx": "never"
+    //   }
+    // ]
+    "prettier/prettier": "error"
+  }
+}
