@@ -1,25 +1,31 @@
 {
-    "compilerOptions": {
-        "forceConsistentCasingInFileNames": true,
-        "allowSyntheticDefaultImports": true,
-        "noFallthroughCasesInSwitch": true,
-        "noUnusedParameters": true,
-        "noImplicitReturns": true,
-        "moduleResolution": "node",
-        "esModuleInterop": true,
-        "noUnusedLocals": true,
-        "noImplicitAny": true,
-        "sourceMap": true,
-        "target": "ES2020",
-        "module": "ES2020",
-        "strict": true,
-        "jsx": "react",
-        "lib": ["esnext", "dom"],
-        "baseUrl": ".",
-        "paths": {
-            "~/*": ["./src/*"]
-        }
-    },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "dist"]
+  "compilerOptions": {
+      "forceConsistentCasingInFileNames": true,
+      "allowSyntheticDefaultImports": true,
+      "noFallthroughCasesInSwitch": true,
+      "noUnusedParameters": true,
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "noUnusedLocals": true,
+      "sourceMap": true,
+      "target": "ES2020",
+      "module": "ES2020",
+      "alwaysStrict": true,
+      "noImplicitThis": true,
+      "noImplicitReturns": true,
+      "noImplicitAny": true,
+      "strictNullChecks": true,
+      "strictBindCallApply": true,
+      "strictFunctionTypes": true,
+      "strictPropertyInitialization": true,
+      "strict": true,
+      "jsx": "react",
+      "lib": ["esnext", "dom"],
+      "baseUrl": ".",
+      "paths": {
+          "~/*": ["./src/*"]
+      }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
