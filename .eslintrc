@@ -15,12 +15,12 @@
     "tsconfigRootDir": "./"
   },
   "extends": [
-    "airbnb-typescript",
+    "airbnb",
     "plugin:@typescript-eslint/recommended",
     "prettier",
-    "plugin:prettier/recommended",
+    "prettier/react",
     "prettier/@typescript-eslint",
-    "prettier/react"
+    "plugin:prettier/recommended"
   ],
   "plugins": [
     "import",
@@ -53,6 +53,8 @@
   ],
   "rules": {
     // "max-len": ["error", { "code": 100 }],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error", {"args": "after-used"}],
     "quotes": [
       "error",
       "single",
@@ -107,6 +109,7 @@
       2
     ],
     "react/destructuring-assignment": "error",
+    "react/require-default-props": ["error", {"ignoreFunctionalComponents": true}],
     "react/jsx-max-props-per-line": [
       1,
       {
@@ -122,21 +125,22 @@
         "declaration": true
       }
     ],
-    // "react/jsx-filename-extension": "off",
+    "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     // Import
     "import/prefer-default-export": "off",
-    // "import/extensions": [
-    //   "error",
-    //   {
-    //     "js": "never",
-    //     "mjs": "never",
-    //     "jsx": "never",
-    //     "ts": "never",
-    //     "tsx": "never"
-    //   }
-    // ]
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "mjs": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "prettier/prettier": "error"
   }
 }

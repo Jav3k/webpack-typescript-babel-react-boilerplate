@@ -7,7 +7,7 @@
         "type-check:watch": "npm run type-check -- --watch",
         "build": "NODE_ENV=production webpack --progress --color --mode production",
         "start": "NODE_ENV=development webpack-dev-server --color --info",
-        "lint": "eslint --fix --cache --ext ts,tsx src/*"
+        "lint": "eslint --fix --cache --ext ts,tsx src/**.*"
     },
     "author": {
         "name": "Ruslan G.",
